@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "skeleton.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <title>to-do list</title>
+</head>
+<body>
+    <div class = "header">
+        <div class = "title">やることリスト // to-do list.</div>
+        <button class = "add-note">+</button>
+    </div>
+    <div class = "content">
+        <div class = "sidebar">
+            <div class = "button-nav">
+                <h2>home</h2>
+                <button class = "inbox"><img src = "images/inbox.svg"> inbox</button>
+                <button class = "today"><img src = "images/calendar-blank.svg">today</button>
+                <button class = "next 7 days"><img src = "images/calendar-week-outline.svg">next 7 days</button>
+            </div>
+            <div class = "border"></div>
+            <div class = "projects">
+                <div class = "button-nav">
+                    <h2>projects</h2>
+                    <button class = "inbox"><img src = "images/folder-outline.svg">gym</button>
+                    <button class = "today"><img src = "images/folder-outline.svg">internships</button>
+                    <button class = "next 7 days"><img src = "images/folder-outline.svg">lifestyle</button>
+                </div>
+            </div>
+            <div class = "add">
+                <button class = "plus">+ add project</button>
+            </div>
+        </div>
+        <div class = "view"> </div>
+    </div>
+    <div class = "overlay"></div>
+    <div class = "addProject-modal">
+        <form id = "addProject">
+            <div class = "row">
+                <label for="inputProjectName">project name</label>
+                <input class="u-full-width" type="text" placeholder="ex: MCAT grind" id="inputProjectName" required>
+            </div>
+            <input type = "button" value = "cancel" id = "cancelProject">
+            <input type = "submit" class = "submit" id = "submitProject">
+        </form>
+    </div>
+    <div class = "addNote-modal">
+        <form id = "addNote">
+                <div>
+                    <label for="inputTaskTitle">task title</label>
+                    <input class="u-full-width" type="text" placeholder="ex: walk cooper" id="inputTaskTitle" required>
+                </div>
+                <div>
+                    <label for="date">date</label>
+                    <input class="u-full-width" type="date" id="date" required>
+                </div>
+                <div>
+                    <label for="project">project</label>
+                    <select class="u-full-width" id="project"></select>
+                </div>
+                <div>
+                    <label for="description">description</label>
+                    <textarea class="u-full-width" placeholder="ex: very important!" id="description" style="resize: none;"></textarea>
+                </div>
+            <input type = "button" value = "cancel" id = "cancelNote">
+            <input type = "submit" class = "submit" style = "background-color: rgb(172, 252, 225);">
+        </form>
+    </div>
+    <script src = "main.js"></script>
+</body>
+</html>
