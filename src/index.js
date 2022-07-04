@@ -1,6 +1,13 @@
-import { getAllItems } from "./components/todo";
+import './css/skeleton.css';
+import './css/style.css';
+import './images/calendar-blank.svg';
+import './images/calendar-week-outline.svg';
+import './images/folder-outline.svg';
+import './images/inbox.svg';
 
-getAllItems();
+import './components/todo';
+import './components/project';
+import './components/nav';
 
 const overlay = document.querySelector('.overlay');
 const projectModal = document.querySelector('.addProject-modal');
@@ -10,7 +17,6 @@ const cancelNote = document.querySelector('#cancelNote');
 
 const addProject = document.querySelector('.plus');
 addProject.addEventListener('click', () => {
-  console.log("HI");
     if (overlay.classList.contains('active')) {
       overlay.classList.remove('active');
       projectModal.classList.remove('active');
@@ -42,4 +48,3 @@ cancelNote.addEventListener('click', () => {
     overlay.classList.remove('active');
     noteModal.classList.remove('active');
 })
-
