@@ -1,9 +1,7 @@
 //Create all to-do items after each submission and import them into project.js, where each
 //item is matched up with their corresponding project by the parameter. Then display.
 
-import { populateScreen, clearView, refreshScreen } from '../components/nav.js';
-
-const view = document.querySelector('.view');
+import { clearView, refreshScreen } from '../components/nav.js';
 
 let allItems =  new Object();
 const submitNote = document.getElementById('addNote');

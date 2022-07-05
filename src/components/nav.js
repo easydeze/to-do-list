@@ -10,13 +10,23 @@ window.onload = () => {
     populateScreen(inbox)
 }
 
-let navigates = document.querySelectorAll('.navigate');
-navigates.forEach((navigate)=> {
-    navigate.addEventListener('click', (e) => {
-    e.preventDefault();
-    clearView();
-    populateScreen(navigate);})
+//FIX: Can't click on new projects added
+// let navigates = document.querySelectorAll('.navigate');
+document.querySelector('body').addEventListener('click', (e) => {
+    if (e.target.className === 'navigate') {
+        console.log(e.target.id)
+        e.preventDefault();
+        clearView();
+        populateScreen(e.target);
+    }
 })
+// navigates.forEach((navigate)=> {
+//     navigate.addEventListener('click', (e) => {
+//     console.log(e)
+//     e.preventDefault();
+//     clearView();
+//     populateScreen(navigate);})
+// })
 
 // const submitNote = document.getElementById('addNote');
 // submitNote.addEventListener('submit', (e) => {
